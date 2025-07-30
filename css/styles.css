@@ -1,0 +1,188 @@
+/*----------Media Queries (Group Decision)------------------------------------------------------------------------------------*/
+/* We utilised media queries to ensure img tags appear as expected on screen sizes 600px or less */
+/* This can be used along side bootstrap frameworks */
+@media (max-width: 600px) { 
+
+img { 
+  height: 150px; /* (James note) On screen sizes 600px or less the image (img tag) height is limited to 150 px */
+  object-fit: cover; /* object-fit will stretch the image to fit in the container but 'cover' ensure the image will zoom and crop
+  * Parts of the sides will not be vibile in most cases but the image is not distorted, which I think is a fair trade off
+  * Instead of 'cover' I could have used 'stretch', it will stretch/expand the image to fit and in most cases look distored
+  * I could have aslo used 'contain', but after testing this shrinks the image to fit but leaves very unappealing border spacing on top and bottom
+  * 'cover' was the best choice after testing all three as images are of a high quality so even when cropped they look quite good. (end of James note) */ 
+  }
+}
+
+body {
+  font-family: "Raleway", sans-serif; /* https://fonts.google.com/specimen/Raleway?query=raleway */
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/*------Navigation Bar used on all pages (Group Decision For Design - Created During Team Meeting)--------------------------*/
+
+.navbar { /* (James note) targets navbar class i.e nav class="navbar" 
+* We have used the wrapping component .navbar with .navbar-expand{-lg} which is for responsive collapsing and color scheme classes. (https://getbootstrap.com/docs/5.3/components/navbar/)
+* We have choosen -lg (large) as it expands at screens width that is greater than or equal to 992px. 
+* Along with navbar-light whihc is dark text on a light background - to ensure good contrast so end user can read/see it well.
+* We have choosen this layout as we do not want the navbar to collapse and remain fixed
+* getbootstrpa.com -> "Responsive behaviours" -> "For navbars that never collapse, add the .navbar-expand class on the navbar. For navbars that always collapse, don’t add any .navbar-expand class." source ref: https://getbootstrap.com/docs/5.3/components/navbar/
+(end of James note) */ 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* see #indexpageimages on this page for breakdown of rgba (James Note)*/ 
+} /* (James Note) px = pixels. It's a unit of measurment used in css and it depends on the device used by the end-user. E.g the pixels on an Iphone 16 is 2556 x 1179 pixels.
+  * (James Note) w3schools -> CSS References -> CSS Units -> Absolute Lengths -> "Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels." (ref: https://www.w3schools.com/cssref/css_units.php) 
+  * (James Note) box-shadow: "Adds one or more shadows to an element" (https://www.w3schools.com/css/css3_shadows_box.asp)
+  * (James Note) 0 is the horizontal offset: 0 is centered horitontally) , 2px is the vertical offset: the shadow displays downward by 2px , 5px is the blur radius: determines how soft/blurry the shadows edges are, in this case its 5 px, if it was 0 it would be a much sharper shadow.
+  */
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #28a745; 
+}
+
+.navbar .nav {
+  margin-top: 10px; /* spacing at top between brand and nav links */
+}
+
+.nav-link {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  color: #555;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #28a745;
+}
+
+/*--------Banner that is displayed on all pages (Group Decision For Design - Created During Team Meeting)-------------------*/
+
+.banner {
+  position: relative;
+  background-image: url("../images/homeImage/julia-zolotova-M_xIaxQE3Ms-unsplash.jpg"); 
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+  color: white;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(40, 167, 69, 0.9); /* (James note) Bootstrap green for the banner with .9 opacity. 
+  * 0 is fully transparent and 1 is a block color 
+  * rgba= (R=40,G-167,B=69,A=0.9) red,green,blue and A is for opacity */
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+
+.banner * {
+  position: relative;
+  z-index: 1;
+}
+
+#bannerLogo { /* Logo created in photoshop by James - Basic design and idea created by entire group during team meeting*/
+  width: 300px; 
+  height: 300px;
+  margin-bottom: 5px;
+}
+
+#brandName {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/*--------Index/Home page - James Page -------------------------------------------------------------------------------------*/
+
+#indexpageimages .gallery-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+  /* (James note) red,green,blue and alpha. alpha is the opacity which ranges from 0 and 1. 
+  * e.g if a(alpha) is 0.4 it will appear as transparent. If it was 1 it would be a solid color. 
+  * Also the r,g,b (red,green,blue) values range between 0 and 255. 
+  * The value r(red) for example: which ranges 0(no red) to 255(very bright saturated red) controls how much red is in the overall color. 
+  * The final result is r(red) mixed with g(green) and mixed with b(blue). 
+  * Depending on how intense each of the colors are determines the final mixed color from this range. 
+  * when all three colors are combined at their maximum intensities (250)the color is white. If all are at their lowest intenisty (0) then the color is black */  
+  /* https://www.w3schools.com/colors/colors_picker.asp + https://www.figma.com/resource-library/what-is-rgb/ (end of James note) */ 
+}
+
+#indexpageimages .gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+#signupForm {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*--------BMI page - James Page -------------------------------------------------------------------------------------------*/
+
+
+#bmipageimages  .gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+}
+
+#bmipageimages  .gallery-img:hover {   
+  /* 
+  * (James note) Targets any element with the class 'gallery-img' that is INSIDE the element with the ID 'bmipageimages'.
+  * The styles will ONLY apply when the user hovers over the 'gallery-img' element.
+  * The .gallery-img elements are contained in <div class="col-6"> of which is contained within the <div class="col-md-4" id="bmipageimages">. 
+  */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.healthyFacts , .bmiCalculator { /* (James note) Targets both div class="healthyFacts" and div class="bmiCalculator" on BMI page */
+  max-width: 100%;
+  background-color: #f4f4f4; 
+  /* (James note) I decided to used both rgba and hex colors, you can convert hex to rgb and vice versa. Hex is a more compact format to define a color. 
+  * (James note) You can also control the opacity in hex simlar to rgba (a) For example:
+  * (James note) I decided to use #f4f4f4 (Very Light shade of grey or rgb = 244, 244, 244) 
+  * (James note) You can add an Alpha hex 'BF' to the end = #f4f4f4BF now it will be a light shade of grey with the opacity of 75%. Other ranger include E6 = 90% opacity and 1A = 10% opacity. 
+  */
+  font-size: 1rem;
+  padding: 20px;
+  border-left: 5px solid #4CAF50; /* green bar on the left */
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+.healthyFacts h2 , .bmiCalculator h2 { /* to demonstrate that it's possible to specifically target the h2 tag */
+  margin: 10; /* (James note) No margin required but not sure if I have to include in the format */
+  font-size: 2rem; /* (James note) rem is the relative unit of measument in CSS. Whereas 1rem = 16 px and in this case as its a h2 heading I choosed 2rem = 32px */
+  text-align: left;
+  word-wrap: break-word; 
+  /* (James note) ensures it wraps on small screens by making sure that it breaks up a string onto a new line if it does not fit in the container 
+  * (James note) (ref: https://www.w3schools.com/cssref/css3_pr_word-wrap.php)
+  */
+}
+
+/*--------Footer that is displayed on all pages (Group Decision For Design - Created During Team Meeting)------------------*/
+
+.footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
