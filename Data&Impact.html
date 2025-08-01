@@ -1,0 +1,189 @@
+<!-- Bobo Nikolov Data and Impact page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data & Impact – Health & Wellness SDG</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap & Custom CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Responsive Navbar with logo and toggle for small screens -->
+  <nav class="navbar navbar-expand-md bg-white fixed-top shadow-sm px-4">
+    <div class="container-fluid">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" href="#">
+        <img src="images/brandName.png" alt="Logo" height="55">
+      </a>
+
+      <!-- Hamburger icon appears on smaller screens -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navigation links collapse into hamburger menu on small screens -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav text-end">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="bmi.html">BMI Calculator</a></li>
+          <li class="nav-item"><a class="nav-link" href="Data&Impact.html">Data & Impact</a></li>
+          <li class="nav-item"><a class="nav-link" href="tips.html">Healthy Living & Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="ContactPage.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content starts here -->
+  <div class="container" style="margin-top: 130px;">
+    <h1 class="text-center mb-4">Our 2024 Health & Wellness Impact</h1>
+    <p class="text-center mb-5">
+      The Health & Wellness SDG initiative has grown dramatically in 2024, making measurable improvements in health education, access to care, and nutritional awareness. Here's a breakdown of how we're changing lives across regions.
+    </p>
+
+    <!-- Chart + Description side by side -->
+    <h3 class="text-center">Program Impact Breakdown</h3>
+    <div class="row align-items-center my-4">
+      <div class="col-md-6 text-center">
+        <!-- Chart Canvas -->
+        <canvas id="impactPieChart" width="250" height="250"></canvas>
+      </div>
+      <div class="col-md-6">
+        <p>
+          This pie chart shows the percentage distribution of our major program investments in 2024.
+          Our core efforts are focused on nutrition (35%) and mental health (25%), followed by screenings (20%) and youth outreach (20%).
+        </p>
+        <ul>
+          <li>🔍 15,000+ people screened for preventable diseases</li>
+          <li>🧘‍♀️ 8,200 participated in stress reduction programs</li>
+          <li>🍎 300+ nutrition education workshops delivered</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Grid of 4 images highlighting program areas -->
+    <h4 class="mt-5 mb-3">Visual Highlights</h4>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mb-4">
+      <div class="col">
+        <img src="images/clinic.avif" class="img-fluid rounded shadow" alt="Clinic">
+      </div>
+      <div class="col">
+        <img src="images/workshop.avif" class="img-fluid rounded shadow" alt="Workshop">
+      </div>
+      <div class="col">
+        <img src="images/diet.avif" class="img-fluid rounded shadow" alt="Diet">
+      </div>
+      <div class="col">
+        <img src="images/emergencyaid.avif" class="img-fluid rounded shadow" alt="Emergency Aid">
+      </div>
+    </div>
+
+    <!-- Key data stats presented as bullet points -->
+    <div class="mb-5">
+      <h4>Key Impact Data</h4>
+      <ul>
+        <li>📍 250+ villages reached with mobile clinics</li>
+        <li>🧠 Mental wellness sessions reached 6,000+ attendees</li>
+        <li>🥗 Nutrition programs improved diets for 4,500 families</li>
+        <li>🎓 120 student health ambassadors trained in 2024</li>
+        <li>💡 92% satisfaction rate among program participants</li>
+        <li>🌎 18 regions with active projects and reporting</li>
+        <li>🧬 3 pilot studies underway on long-term impact of programs</li>
+      </ul>
+    </div>
+
+    <!-- Sections that open modals with more info -->
+    <div class="row align-items-center g-4 mb-5">
+      <div class="col-md-4">
+        <img src="images/youthprogram.avif" class="img-fluid rounded shadow" alt="Youth Program" data-bs-toggle="modal" data-bs-target="#youthModal">
+      </div>
+      <div class="col-md-8">
+        <h5>Youth Wellness Programs</h5>
+        <p>Our youth-led outreach campaigns engage students directly in spreading health awareness through creative and peer-led events. Over 100 schools have participated in 2024 alone.</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center g-4 mb-5">
+      <div class="col-md-4">
+        <img src="images/healthhubs.avif" class="img-fluid rounded shadow" alt="Health Hubs" data-bs-toggle="modal" data-bs-target="#hubsModal">
+      </div>
+      <div class="col-md-8">
+        <h5>Community Health Hubs</h5>
+        <p>We’ve established 20+ local health hubs that offer weekly screenings, mental health check-ins, and free dietary consultations.</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center g-4 mb-5">
+      <div class="col-md-4">
+        <img src="images/clinic.avif" class="img-fluid rounded shadow" alt="Expansion" data-bs-toggle="modal" data-bs-target="#expansionModal">
+      </div>
+      <div class="col-md-8">
+        <h5>Expanding Our Reach</h5>
+        <p>By 2026, our goal is to double our regional impact by scaling mobile units and growing our ambassador network.</p>
+      </div>
+    </div>
+
+    <!-- Pop-up Modals triggered by image clicks -->
+    <div class="modal fade" id="youthModal" tabindex="-1" aria-labelledby="youthModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><h5 class="modal-title">Youth Wellness Programs</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+          <div class="modal-body">In 2024, over 10,000 youth participated in health campaigns. Schools used gamified learning to teach hygiene and nutrition.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="hubsModal" tabindex="-1" aria-labelledby="hubsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><h5 class="modal-title">Community Health Hubs</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+          <div class="modal-body">Health hubs have provided 5,000+ free consultations in underserved areas and continue expanding their weekly outreach.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="expansionModal" tabindex="-1" aria-labelledby="expansionModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header"><h5 class="modal-title">Expanding Our Reach</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+          <div class="modal-body">With more mobile clinics and volunteer training, we’re set to double the reach of our services by 2026.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Big numbers and closing statement -->
+    <div class="text-center mb-5">
+      <h4>📈 2024 In Numbers</h4>
+      <p class="lead">12,000+ individuals benefited | 250+ volunteers trained | 80% avg. health access increase</p>
+      <p>Every initiative is designed with long-term sustainability and measurable impact in mind.</p>
+    </div>
+
+    <!-- Link to the official SDG report -->
+    <div class="text-center mb-5">
+      <a href="https://unstats.un.org/sdgs/report/2024/goal-03/" class="btn btn-outline-success" download>
+        📄 Download Full Report
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5 mb-4 text-muted">
+    &copy; 2025 Health & Wellness SDG
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js.js"></script>
+</body>
+</html>
+
