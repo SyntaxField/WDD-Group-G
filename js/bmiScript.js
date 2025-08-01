@@ -16,48 +16,52 @@ inputElement.addEventListener("keyup", (event) => { //arrow function that will b
 	var sUserInput = inputElement.value; //inputElement refers to the DOM element with the id=userName, to capture its value to store it as a variable
 	// .value gets the text inside the input field and sUserInput stores that text as a JS variable
 	if (sUserInput.length > 2){
-		btnElement.disabled = false; //The button will be activeed if this condition is false (less than 2 characters)
+		btnElement.disabled = false; //The button will be active if this condition is false (more than 2 characters)
 	} else{
-		btnElement.disabled = true;
+		btnElement.disabled = true; //The button will be disabled if this condition is true (less than 2 characters)
 	}
 	if (event.key === "Enter" && sUserInput.length >= 2) { //checks two conditions at once when the user starts typing in the input field
-	//The evnt.key=== "Enter" checks if the Enter key was pressed on keyboard and(logical and) the user inout length is greater than or less than 2	
+	//The event.key === "Enter" checks if the Enter key was pressed on keyboard and(logical and) the user inout length is greater than or less than 2	
 		DisplayData(); //This calls the function when enter key is selected on keyboard if the input length is greater than or equal to 2
 	}
 	});
 
-//Create two arrays and store both of them in two js variables. There are 6 strings in each array but recognised as index 0 - 5. ; ref https://www.w3schools.com/js/js_arrays.asp
-	var healthyEating = ["include a variety of colorful fruits and vegetables in your diet to get a wide range of nutrients", //0
-	"incorporate leafy greens and vegetables such as spinach, kale and broccoli in your diet as they are rich in vitamins A,C and K as well as fiber and antioxidants that support heart and brain health", //1
-	"opt for whole grains like brown rice, quinoa and whole wheat over refined grains", //2
-	"incorporate sources of healthy fats like avocados, nuts and olive oil", //3
-	"aim for balanced meals that include a mix of protein, fiber and healthy carbs", //4
-	"limit your sugar intake by avoiding sugary drinks and snacks to maintain steady energy levels throughout the day", //5
-	"incorporate oily fish like salmon, mackerel, or sardines twice a week as they provide essential omega-3 fatty acids that support heart, brain, and joint health."]; //6
-	var healthySnack = ["greek yogurt with berries", //0
-	"apple slices with peanut butter", //1
-	"carrot sticks with hummus", //2
-	"mixed nuts", //3
-	"rice cakes with avacado", //4
-	"boiled eggs", //5
-	"cottage cheese with pineapple or cucumber"]; //6
+//I Created two arrays and stored both of them in two js variables. There are 6 strings in each array but recognised as index 0 - 5. ; ref https://www.w3schools.com/js/js_arrays.asp
+const bmiFacts = [
+  "BMI stands for Body Mass Index, a simple calculation using height and weight",
+  "a healthy BMI typically ranges from 18.5 to 24.9",
+  "BMI is used worldwide as a general indicator of body fat levels",
+  "BMI doesn’t distinguish between muscle and fat mass",
+  "extreme BMI values (too low or too high) can be linked to higher health risks",
+  "for most adults, BMI provides a useful rough guide to whether you're under or overweight",
+  "BMI does not consider age, sex, or muscle composition"
+];
 
+const bmiTips = [
+  "engage in regular physical activity, like walking or cycling for 30 minutes a day",
+  "balance your calorie intake with your energy expenditure to maintain a healthy BMI",
+  "track your BMI over time as part of a larger wellness routine",
+  "avoid crash diets — aim for sustainable, long-term eating habits",
+  "speak with a healthcare provider for a full health assessment, not just BMI",
+  "try strength training to build muscle, which supports a healthy metabolism",
+  "eat a mix of whole foods, fibre, lean proteins, and healthy fats to support your goals"
+];
 function DisplayData() {
-	var iRandomTip = Math.floor(Math.random() * healthyEating.length); //The Math.floor rounds to a whole number and Math.random() generates a decimal between 0 and just under 1 (0 -> 0.99; 0.56 for example). 
+	var iRandomFact = Math.floor(Math.random() * bmiFacts.length); //The Math.floor rounds to a whole number and Math.random() generates a decimal between 0 and just under 1 (0 -> 0.99; 0.56 for example). 
 // Example;  0.43 (Math.random) * 3 (healthyEating) = 1.29 
 //Then Math.floor(1.29) rounds it down to a whole number in this case 1 which becomes a random index from the array: incorporate leafy greens and vegetables such as spinach, kale and broccoli in your diet as they are rich in vitamins A,C and K as well as fiber and antioxidants that support heart and brain health"
 //This value is then stored in the variable iRandomTip	
-	var iRandomSnack = Math.floor(Math.random() * healthySnack.length);
+	var iRandomTip = Math.floor(Math.random() * bmiTips.length);
 
-	var randomTip = healthyEating[iRandomTip]; //[iRandomTip] store the index value that was generated earlier, stored in the variable healthyEating
+	var randomFact = bmiFacts[iRandomFact]; //[iRandomTip] store the index value that was generated earlier, stored in the variable healthyEating
 	// randomTip now stores the string value obtained from that index number from the array healthyEating. 
 	// If I created var randomTip = healthyEating[1], then index 1 from the array healthyEating would be stored in the variable randomTip
-	var randomSnack = healthySnack[iRandomSnack];
+	var randomTip = bmiTips[iRandomTip];
 
 	var userName = inputElement.value; //declaring a variable called userName that stores the value obtained from the inputElement(username) which the user typed in the input field with the id="username"
 	var sMessageFact = "Hey " + userName + "!<br>" +
-	"Your tip of day is to " + randomTip + "." + "<br>" +
-	"Try a snack like  " + randomSnack + "."; //Message that appears after input box
+	"Did you know that " + randomFact + "," + "<br>" +
+	"You should try to  " + randomTip + "."; //Message that appears after input box
 
 		messagefactElement.innerHTML = sMessageFact;
 		messagefactElement.style.color = "green"
@@ -145,56 +149,4 @@ function calculateBMI(){ //this function calculate the bmi via the user inputs, 
     	resetBMIButton.style.display = "none";
   };
 }
-  		
-// James Script for HomePage
-
-
-var signupFormElement = document.getElementById("signupForm"); //form id 
-var inputAgeElement = document.getElementById("signupAge");
-var inputGenderElement = document.getElementById("signupGender");
-var inputEmailElement = document.getElementById("signupEmail");
-var getDetailsButton = document.getElementById("btnGetDetails");
-
-
-getDetailsButton.disabled = true; // I added this here to ensure the button element is disabled unless it contains an input length of 2 or more characters
-
-
-signupFormElement.addEventListener("keyup", (event) => { //arrow function that will be executed on the 'keyup' event. 
-//The inputFormElement refers to userName taken from the html using document.getELementById
-//The event listener detects keystrokes upon release. 
-	var sFormInput = signupFormElement.value; //signupFormElement refers to the DOM element with the id=userName, to capture its value to store it as a variable
-	// .value gets the text inside the input field and sFormInput stores that text as a JS variable
-	if (sFormInput.length > 2){
-		btnElement.disabled = false; //The button will be activeed if this condition is false (less than 2 characters)
-	} else{
-		btnElement.disabled = true;
-	}
-	if (event.key === "Enter" && sFormInput.length >= 2) { //checks two conditions at once when the user starts typing in the input field
-	//The evnt.key=== "Enter" checks if the Enter key was pressed on keyboard and(logical and) the user inout length is greater than or less than 2	
-		getDetails(); //This calls the function when enter key is selected on keyboard if the input length is greater than or equal to 2
-	}
-	});
-
-function getDetails() {
-  const name = document.getElementById("signupName").value.trim();
-  const age = parseInt(document.getElementById("signupAge").value);
-  const gender = document.getElementById("signupGender").value;
-  const email = document.getElementById("signupEmail").value.trim();
-
-  if (!name || age <= 0 || !Number.isInteger(age) || !gender || !email.includes("@")) { // https://www.w3schools.com/jsref/jsref_isinteger.asp ; used this resource to confirm the 'age' is a whole number. It returns the method if it is true
-    alert("Please fill out all fields correctly and try again.");
-    return;
-  }
-
-  alert ("Thanks for signing up, " + name + "!");
-
-  event.preventDefault(); //this stops the default bahaviour of browser from happening such as refreshing the page
-
-  const form = document.getElementById("signupForm");
-  form.reset(); //resets the input fields on form only. With event.preventDefault(); only the form resets after the alert notthe entire webpage.
-
-}
-
-
-
-
+  	

@@ -9,7 +9,7 @@ Note that any related notes are explained in the style sheet and/or script
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap" rel="stylesheet">
@@ -36,58 +36,49 @@ Note that any related notes are explained in the style sheet and/or script
   <!-- link to our external .css file -->
 <link rel= "stylesheet" href="css/styles.css">
  <!-- link to our external script -->
-<script defer src="js/script.js"></script>
+<script defer src="js/indexScript.js"></script>
 
 </head>
 
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-light bg-light"> <!-- Navigation Bar and its container -->
-  <div class="container text-center"> <!-- text-center ensures brand/logo,text and nav are centered -->
-    
-    <button 
-    type ="button" 
-    data-toggle="collapse"
-    class="navbar-toggler"
-    aria-controls="navbarNav"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-    > 
-      <span class ="navbar-toggler-icon"></span>
-    </button>
-    <!-- Centered Brand (Logo + Text) -->
-    <a class="navbar-brand d-flex flex-column align-items-center gap-2 mx-auto" href="about.html">
-      <img src="images/logos/websiteLogo.png" alt="Logo" width="80" height="80">
-      <span id="brandName">Good Health and Well-Being</span>
-    </a>
+    <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
 
-    <!--Centered navigation links-->
-    <div class="w-100 mt-3">
-      <ul class="nav justify-content-center gap-3"> 
-      <!--The 'nav' class styles the list in a horizontal format, and 'justify-content-center' centers the text(page links) horizontally within the container.
-      'gap-3'; gap controls the spacing. It adds in the spacing between each navigation item. 
-      gap-1 = 0.25rem , gap-3 = 1 rem-->
-        <li class="nav-item">
-          <a class="nav-link" href="bmi.html">BMI Calculator</a>
-        </li> 
-        <li class="nav-item">
+      <!-- Logo on the left -->
+      <a class="navbar-brand" href="about.html">
+        <img src="images/logos/brandName.png" alt="brandLogo" class="img-fluid" style="max-height: 80px;">
+      </a>
+
+      <!-- Hamburger menu button that appears on small screens such as a phone -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Page links (hidden on small screens, shown on large) -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav gap-3">
+         <li class="nav-item">
+           <a class="nav-link" href="bmi.html">BMI Calculator</a>
+          </li>
+          <li class="nav-item">
           <a class="nav-link" href="dataimpact.html">Data & Impact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="healthylivingtips.html">Healthy Living Tips</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div> <!-- closing div for nav links -->
-    
-  </div> <!-- closing div class for the container of which contains the logo and text -->
-</nav> <!-- closing tag for nav element -->
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="healthylivingtips.html">Healthy Living Tips</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
 <!--Banner-->
 
@@ -136,7 +127,8 @@ ref: https://getbootstrap.com/docs/5.3/layout/containers/ -->
 <!--Newsletter-->
 <div class="container mt-5">
   <div class="row"> <!-- m = margin and t = top so mt-5 means “margin-top: large spacing” as the 5 is the highest in the bootstrap scale ranging from 0-5 -->
-      <h3 class="text-center mb-4">Sign Up to Our Newsletter</h3>
+      <h3 class="text-center mb-2">Sign Up For Exclusive Promotions With Our Partners!</h3>
+      <h4 class="text-center mb-2">We have partnered with over 250 brands</h4>
       <form id="signupForm">
         <div class="mb-3">
           <label for="signupName" class="form-label">Name</label>
@@ -155,12 +147,17 @@ ref: https://getbootstrap.com/docs/5.3/layout/containers/ -->
             <option>Non-binary</option>
             <option>Prefer not to say</option>
           </select>
-        </div>
+        </div>              
         <div class="mb-3">
           <label for="signupEmail" class="form-label">Email address</label>
           <input type="email" class="form-control" id="signupEmail" placeholder="Enter your email" required>
         </div>
-        <button onclick="getDetails();" id="btnGetDetails" class="btn btn-success w-100">Submit</button>
+        <div class="mb-3">
+          <label for="signupCheckBox" class="form-label">Please select the following prior to submission</label>
+        <div class="mb-3">
+          <input type="checkbox" id="checkBoxMarketing"> I agree to the processing of my personal data and to receive marketing emails. I understand I can unsubscribe at any time. </input>
+        </div>       
+        <button type="submit" id="btnGetDetails" class="btn btn-success w-100">Submit</button>
       </form>
   </div>
 </div>
@@ -168,7 +165,7 @@ ref: https://getbootstrap.com/docs/5.3/layout/containers/ -->
 <!-- Footer -->
 <footer class="footer bg-dark text-white text-center py-3 mt-5">
   <img src="images/logos/websiteLogo.png" alt="Logo" width="80" height="80">
-  <p class="mb-0">&copy; 2025 Good Health & Well-Being. All rights reserved.</p>
+  <p class="mb-1">&copy; 2025 WholeHealth. All rights reserved.</p>
   <p class="mb-0"> Developed & Designed By Group G</p>
 </footer>
 

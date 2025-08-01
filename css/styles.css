@@ -18,6 +18,37 @@ body {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+  background-color: #F5ECD5; /* Page Background - Ivory */
+  color: #626F47; /* Main Headings & Text - Dark Green */
+}
+
+.logo-img {
+  max-width: 250px; 
+  height: auto;     
+}
+
+/*--------Button Styling-------------------------------------------------------------------------------------------*/
+
+.btn-success {
+  background-color: #F0BB78; /* Golden Peach */
+  border-color: #F0BB78;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #E0A85C; /* Hover */
+  border-color: #E0A85C;
+}
+
+.btn-secondary {
+  background-color: #A4B465; /* Olive Green */
+  border-color: #A4B465;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #626F47; /* Dark Green */
+  border-color: #626F47;
 }
 
 /*------Navigation Bar used on all pages (Group Decision For Design - Created During Team Meeting)--------------------------*/
@@ -30,14 +61,17 @@ body {
 * getbootstrpa.com -> "Responsive behaviours" -> "For navbars that never collapse, add the .navbar-expand class on the navbar. For navbars that always collapse, don’t add any .navbar-expand class." source ref: https://getbootstrap.com/docs/5.3/components/navbar/
 (end of James note) */ 
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* see #indexpageimages on this page for breakdown of rgba (James Note)*/ 
-} /* (James Note) px = pixels. It's a unit of measurment used in css and it depends on the device used by the end-user. E.g the pixels on an Iphone 16 is 2556 x 1179 pixels.
+  /* (James Note) px = pixels. It's a unit of measurment used in css and it depends on the device used by the end-user. E.g the pixels on an Iphone 16 is 2556 x 1179 pixels.
   * (James Note) w3schools -> CSS References -> CSS Units -> Absolute Lengths -> "Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels." (ref: https://www.w3schools.com/cssref/css_units.php) 
   * (James Note) box-shadow: "Adds one or more shadows to an element" (https://www.w3schools.com/css/css3_shadows_box.asp)
   * (James Note) 0 is the horizontal offset: 0 is centered horitontally) , 2px is the vertical offset: the shadow displays downward by 2px , 5px is the blur radius: determines how soft/blurry the shadows edges are, in this case its 5 px, if it was 0 it would be a much sharper shadow.
   */
+  background-color: #F5ECD5; /* Ivory */
+} 
+
 .navbar-brand {
   font-size: 1.5rem;
-  color: #28a745; 
+  color: #A4B465; /* Olive Green */
 }
 
 .navbar .nav {
@@ -47,12 +81,12 @@ body {
 .nav-link {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
-  color: #555;
+  color: #A4B465; /* Olive Green */
   transition: color 0.3s;
 }
 
 .nav-link:hover {
-  color: #28a745;
+  color: #E0A85C; /* warm golden amber */
 }
 
 /*--------Banner that is displayed on all pages (Group Decision For Design - Created During Team Meeting)-------------------*/
@@ -77,9 +111,9 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(40, 167, 69, 0.9); /* (James note) Bootstrap green for the banner with .9 opacity. 
+  background-color: rgba(98, 111, 71, 0.85); /* (James note) semi-transparent (.85 opacity) dark green overlay
   * 0 is fully transparent and 1 is a block color 
-  * rgba= (R=40,G-167,B=69,A=0.9) red,green,blue and A is for opacity */
+  * rgba= (R=98,G-111,B=71,A=0.85) red,green,blue and A is for opacity */
   border-radius: 0.5rem;
   z-index: 0;
 }
@@ -89,7 +123,7 @@ body {
   z-index: 1;
 }
 
-#bannerLogo { /* Logo created in photoshop by James - Basic design and idea created by entire group during team meeting*/
+#bannerLogo { /* Logo created in photoshop by James - Basic design and idea created by entire group that utilised choosen color palette*/
   width: 300px; 
   height: 300px;
   margin-bottom: 5px;
@@ -109,6 +143,7 @@ body {
   height: 400px;
   object-fit: cover;
   border-radius: 10px;
+  border: 2px solid #D9D2BE; /* (James note) Borders - Muted Beige */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
   /* (James note) red,green,blue and alpha. alpha is the opacity which ranges from 0 and 1. 
   * e.g if a(alpha) is 0.4 it will appear as transparent. If it was 1 it would be a solid color. 
@@ -126,7 +161,7 @@ body {
 }
 
 #signupForm {
-  background-color: #f8f9fa;
+  background-color: #fff; /* white */
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -152,9 +187,9 @@ body {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-.healthyFacts , .bmiCalculator { /* (James note) Targets both div class="healthyFacts" and div class="bmiCalculator" on BMI page */
+.bmiFacts , .bmiCalculator { /* (James note) Targets both div class="bmiFacts" and div class="bmiCalculator" on BMI page */
   max-width: 100%;
-  background-color: #f4f4f4; 
+  background-color: #fff; 
   /* (James note) I decided to used both rgba and hex colors, you can convert hex to rgb and vice versa. Hex is a more compact format to define a color. 
   * (James note) You can also control the opacity in hex simlar to rgba (a) For example:
   * (James note) I decided to use #f4f4f4 (Very Light shade of grey or rgb = 244, 244, 244) 
@@ -162,26 +197,30 @@ body {
   */
   font-size: 1rem;
   padding: 20px;
-  border-left: 5px solid #4CAF50; /* green bar on the left */
+  border-left: 5px solid #F0BB78; /* Golden Peach on left border */
   margin: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* soft shadow */
 }
 
-.healthyFacts h2 , .bmiCalculator h2 { /* to demonstrate that it's possible to specifically target the h2 tag */
+.bmiFacts h2 , .bmiCalculator h2 { /* (James note) to demonstrate that it's possible to specifically target the tags */
   margin: 10; /* (James note) No margin required but not sure if I have to include in the format */
   font-size: 2rem; /* (James note) rem is the relative unit of measument in CSS. Whereas 1rem = 16 px and in this case as its a h2 heading I choosed 2rem = 32px */
   text-align: left;
-  word-wrap: break-word; 
+  word-wrap: break-word;  
   /* (James note) ensures it wraps on small screens by making sure that it breaks up a string onto a new line if it does not fit in the container 
   * (James note) (ref: https://www.w3schools.com/cssref/css3_pr_word-wrap.php)
   */
+  font-family: "Raleway", sans-serif; /* https://fonts.google.com/specimen/Raleway?query=raleway */
+  font-weight: 800;
+  font-style: normal;
+  color: #626F47;
 }
 
 /*--------Footer that is displayed on all pages (Group Decision For Design - Created During Team Meeting)------------------*/
 
 .footer {
-  background-color: #343a40;
-  color: #fff;
+  background-color: #626F47; /* Dark Green */
+  color: #F5ECD5; /* Ivory */
   padding: 20px 0;
   margin-top: 50px;
   font-size: 0.9rem;
