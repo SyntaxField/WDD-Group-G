@@ -51,7 +51,7 @@ body {
   border-color: #626F47;
 }
 
-/*------Navigation Bar used on all pages (Group Decision For Design - Created During Team Meeting)--------------------------*/
+/*------Navigation Bar used on all pages (Group Decision For Design )-------------------------------------------------------*/
 
 .navbar { /* (James note) targets navbar class i.e nav class="navbar" 
 * We have used the wrapping component .navbar with .navbar-expand{-lg} which is for responsive collapsing and color scheme classes. (https://getbootstrap.com/docs/5.3/components/navbar/)
