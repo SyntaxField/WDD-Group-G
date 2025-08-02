@@ -123,17 +123,9 @@ body {
   z-index: 1;
 }
 
-#bannerLogo { /* Logo created in photoshop by James - Basic design and idea created by entire group that utilised choosen color palette*/
-  width: 300px; 
-  height: 300px;
-  margin-bottom: 5px;
-}
-
-#brandName {
-  font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
+.brand-logo {
+  max-height: 80px;
+  height: auto;
 }
 
 /*--------Index/Home page - James Page -------------------------------------------------------------------------------------*/
@@ -204,7 +196,7 @@ body {
 
 .bmiFacts h2 , .bmiCalculator h2 { /* (James note) to demonstrate that it's possible to specifically target the tags */
   margin: 10; /* (James note) No margin required but not sure if I have to include in the format */
-  font-size: 2rem; /* (James note) rem is the relative unit of measument in CSS. Whereas 1rem = 16 px and in this case as its a h2 heading I choosed 2rem = 32px */
+  font-size: 2rem; /* (James note) rem is the relative unit of measurment in CSS. Whereas 1rem = 16 px and in this case as its a h2 heading I choosed 2rem = 32px */
   text-align: left;
   word-wrap: break-word;  
   /* (James note) ensures it wraps on small screens by making sure that it breaks up a string onto a new line if it does not fit in the container 
@@ -224,4 +216,131 @@ body {
   padding: 20px 0;
   margin-top: 50px;
   font-size: 0.9rem;
+}
+
+/* --- Custom Team Member Image Styling (About Page) --- */
+.team .row .col-md-3 img {
+  border-radius: 16px !important; /* Soft corners */
+  box-shadow: 0 0 0 6px #0077cc, 0 2px 8px rgba(0,119,204,0.08); /* Blue outer highlight + soft shadow */
+  border: 2px solid #0077cc;
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.team .row .col-md-3 img:hover {
+  box-shadow: 0 0 0 10px #3399ff, 0 4px 16px rgba(0,119,204,0.15); /* Brighter blue on hover */
+}
+
+/* --- Feedback Form Highlight Box --- */
+.form-highlight {
+  background: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Feedback Thank You Box Styling --- */
+#feedbackMessage {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,119,204,0.08);
+  padding: 16px;
+  border: 1px solid #eee;
+  color: #0077cc;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* --- Healthy Living Quiz Result Box Styling (healthytips.html) --- */
+#quizResult {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,119,204,0.08);
+  padding: 16px;
+  border: 1px solid #eee;
+  color: #0077cc;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+/* --- Custom About Page Styles --- */
+.brand-logo {
+  max-height: 80px;
+}
+
+.banner {
+  /* Already styled by Bootstrap and your existing CSS */
+}
+
+#bannerLogo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 5px;
+}
+
+.team-card {
+  background: #eaf6ff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,119,204,0.08);
+  margin-bottom: 1.5rem;
+}
+
+.founder-img {
+  border-radius: 50%;
+  border: 2px solid #0077cc;
+  box-shadow: 0 2px 8px rgba(0,119,204,0.08);
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.team-img {
+  border-radius: 16px;
+  border: 2px solid #0077cc;
+  box-shadow: 0 0 0 6px #0077cc, 0 2px 8px rgba(0,119,204,0.08);
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.team-img:hover {
+  box-shadow: 0 0 0 10px #3399ff, 0 4px 16px rgba(0,119,204,0.15);
+}
+
+/* --- Custom Healthy Tips Page Styles --- */
+.brand-logo {
+  max-height: 80px;
+}
+
+.banner {
+  /* Already styled by Bootstrap and your existing CSS */
+}
+
+#bannerLogo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 5px;
+}
+
+.quiz-card-bg {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,119,204,0.08);
+}
+
+#quizResult {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,119,204,0.08);
+  padding: 16px;
+  border: 1px solid #eee;
+  color: #0077cc;
+  font-weight: 500;
+  font-size: 1.1em;
+  margin-top: 10px;
 }
