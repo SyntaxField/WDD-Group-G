@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WholeHealth | About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="images/logos/websiteLogo.png">
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+   <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="about.html">
+        <img src="images/logos/brandName.png" alt="brandLogo" class="img-fluid brand-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item">
+            <a class="nav-link" href="bmi.html">BMI Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dataimpact.html">Data & Impact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="healthylivingtips.html">Healthy Living Tips</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <div class="container mt-5">
+    <div class="banner text-center p-4 mb-4 rounded shadow">
+      <img src="images/logos/websiteLogo.png" alt="websiteLogo" class="img-fluid" id="bannerLogo">
+      <h1 class="mb-0">Healthy Living Tips</h1>
+      <p class="mb-0">Stay Active & Eat Well!</p>
+    </div>
+    <!-- Main Content -->
+     <!--  description of the founder style copied from abous us page on health.com -->
+
+    <div class="row align-items-center mb-5 team-card">
+      <div class="col-md-3 text-center py-4">
+        <img src="images/owner.jpg" alt="A picture of the founder of WholeHealth" class="founder-img">
+      </div>
+      <div class="col-md-9 py-4">
+        <h2 class="text-primary mb-2">Founder of WholeHealth</h2>
+        <p class="mb-0 text-dark">
+          Dr. Amani Sissoko, born in 1985 in Bamako, Mali, blends traditional herbal knowledge and modern medicine: after graduating in Dakar, she launched the Health & Well‑Being SDG initiative in 2016, building a solar-powered dashboard aligned with UN SDG 3 her platform reached over 50,000 people by 2024, spanning nutritional education, mental health, and screenings via a network of 45 mobile clinics and 200 ambassadors, earning her the 2017 Africa Innovation Challenge, and embodying her motto “Health is a conversation, not a prescription” through open source, community led data managing local health outcomes.
+        </p>
+      </div>
+    </div>
+    <div class="mb-4">
+      <p>
+        Welcome to our website! We are dedicated to providing quality content and helpful resources for our visitors.
+        Our mission is to make learning and discovery easy and enjoyable for everyone.
+      </p>
+    </div>
+    <div class="team mb-5">
+      <h2 class="text-primary mb-2">Our Team</h2>
+      <div class="row align-items-center mb-4 team-card">
+        <div class="col-md-3 text-center py-4">
+          <img src="images/developers.jpg" alt="Ryan Omoikhudu developed about page and tip page" class="team-img">
+        </div>
+        <div class="col-md-9 py-4">
+          <h2 class="text-primary mb-2">Ryan Omoikhudu</h2>
+          <p class="mb-0 text-dark">Developed about page and tip page</p>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4 team-card">
+        <div class="col-md-3 text-center py-4">
+          <img src="images/developer2.jpg" alt="Bobo Nikolov Developed contact page" class="team-img">
+        </div>
+        <div class="col-md-9 py-4">
+          <h2 class="text-primary mb-2">Bobo Nikolov</h2>
+          <p class="mb-0 text-dark">Developed contact page</p>
+        </div>
+      </div>
+      <div class="row align-items-center mb-4 team-card">
+        <div class="col-md-3 text-center py-4">
+          <img src="images/developer1.jpg" alt="James Murphy developed home page & BMI page, also the Designer" class="team-img">
+        </div>
+        <div class="col-md-9 py-4">
+          <h2 class="text-primary mb-2">James Murphy</h2>
+          <p class="mb-0 text-dark">Developed home page & BMI page, also the Designer</p>
+        </div>
+      </div>
+    </div>
+    <h2 class="text-primary mb-3">Feedback Form</h2>
+    <form id="feedbackForm" class="form-highlight">
+      <div class="mb-3">
+        <label for="feedbackEmail" class="form-label">Email:</label>
+        <input type="email" id="feedbackEmail" name="feedbackEmail" class="form-control" required placeholder="Your email">
+      </div>
+      <div class="mb-3">
+        <label for="feedbackText" class="form-label">Feedback:</label>
+        <textarea id="feedbackText" name="feedbackText" rows="4" class="form-control" required placeholder="Your feedback"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Submit Feedback</button>
+    </form>
+    <div class="message text-success mb-4" id="feedbackMessage"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white text-center py-3 mt-5">
+    <img src="images/logos/websiteLogo.png" alt="Logo" width="80" height="80">
+    <p class="mb-1">&copy; 2025 WholeHealth. All rights reserved.</p>
+    <p class="mb-0">Developed & Designed By Group G</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.min.js"
+    integrity="sha384-RuyvpeZCxMJCqVUGFI0Do1mQrods/hhxYlcVfGPOfQtPJh0JCw12tUAZ/Mv10S7D"
+    crossorigin="anonymous"></script>
+  <script src="java.js"></script>
+</body>
+</html>
